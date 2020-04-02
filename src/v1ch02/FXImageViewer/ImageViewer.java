@@ -13,7 +13,7 @@ import javafx.stage.*;
 import javafx.stage.FileChooser.*;
 
 /**
- * A program for viewing images.
+ * A program for viewing images. Java8内置支持javafx Java8之后需自行安装javafx
  * @version 1.40 2017-12-10
  * @author Cay Horstmann
  */
