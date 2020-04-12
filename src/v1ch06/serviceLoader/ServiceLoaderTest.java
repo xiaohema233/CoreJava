@@ -1,4 +1,4 @@
-package serviceLoader;
+package v1ch06.serviceLoader;
 
 import java.io.*;
 import java.nio.charset.*;

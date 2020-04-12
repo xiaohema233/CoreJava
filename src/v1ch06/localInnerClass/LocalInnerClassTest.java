@@ -38,11 +38,14 @@ class TalkingClock
    {
       class TimePrinter implements ActionListener
       {
+         @Override
          public void actionPerformed(ActionEvent event)
          {
             System.out.println("At the tone, the time is " 
                   + Instant.ofEpochMilli(event.getWhen()));
-            if (beep) Toolkit.getDefaultToolkit().beep();
+            if (beep) {
+               Toolkit.getDefaultToolkit().beep();
+            }
          }
       }
       var listener = new TimePrinter();
