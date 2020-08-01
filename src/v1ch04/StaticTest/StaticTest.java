@@ -14,18 +14,18 @@ public class StaticTest
 
       staff[0] = new Employee("Tom", 40000);
       staff[1] = new Employee("Dick", 60000);
-      staff[2] = new Employee("Harry", 65000);
+       staff[2] = new Employee("Harry", 65000);
 
-      // print out information about all Employee objects
-      for (Employee e : staff)
-      {
-         e.setId();
-         System.out.println("name=" + e.getName() + ",id=" + e.getId() + ",salary="
-            + e.getSalary());
-      }
+       // print out information about all Employee objects
+       for (Employee e : staff) {
+           e.setId();
+           System.out.println("name=" + e.getName() + ",id=" + e.getId() + ",salary="
+                   + e.getSalary());
+       }
 
-      int n = Employee.getNextId(); // calls static method
-      System.out.println("Next available id=" + n);
+       // calls static method
+       int n = Employee.getNextId();
+       System.out.println("Next available id=" + n);
    }
 }
 
@@ -49,29 +49,27 @@ class Employee
       return name;
    }
 
-   public double getSalary()
-   {
-      return salary;
-   }
+    public double getSalary() {
+        return salary;
+    }
 
-   public int getId()
-   {
-      return id;
-   }
+    public int getId() {
+        return id;
+    }
 
-   public void setId()
-   {
-      id = nextId; // set id to next available id
-      nextId++;
-   }
+    public static int getNextId() {
+        // returns static field
+        return nextId;
+    }
 
-   public static int getNextId()
-   {
-      return nextId; // returns static field
-   }
+    public void setId() {
+        // set id to next available id
+        id = nextId;
+        nextId++;
+    }
 
-   public static void main(String[] args) // unit test
-   {
+    public static void main(String[] args) // unit test
+    {
       Employee e = new Employee("Harry", 50000);
       System.out.println(e.getName() + " " + e.getSalary());
    }

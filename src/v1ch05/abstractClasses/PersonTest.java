@@ -2,13 +2,12 @@ package v1ch05.abstractClasses;
 
 /**
  * This program demonstrates abstract classes.
- * @version 1.01 2004-02-21
+ *
  * @author Cay Horstmann
+ * @version 1.01 2004-02-21
  */
-public class PersonTest
-{
-   public static void main(String[] args)
-   {
+public class PersonTest {
+   public static void main(String[] args) {
       var people = new Person[2];
 
       // fill the people array with Student and Employee objects

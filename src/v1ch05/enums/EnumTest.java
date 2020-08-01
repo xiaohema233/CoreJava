@@ -2,15 +2,28 @@ package v1ch05.enums;
 
 import java.util.*;
 
+enum Size {
+   SMALL("S"), MEDIUM("M"), LARGE("L"), EXTRA_LARGE("XL");
+
+   private String abbreviation;
+
+   private Size(String abbreviation) {
+      this.abbreviation = abbreviation;
+   }
+
+   public String getAbbreviation() {
+      return abbreviation;
+   }
+}
+
 /**
  * This program demonstrates enumerated types.
- * @version 1.0 2004-05-24
+ *
  * @author Cay Horstmann
+ * @version 1.0 2004-05-24
  */
-public class EnumTest
-{  
-   public static void main(String[] args)
-   {  
+public class EnumTest {
+   public static void main(String[] args) {
       var in = new Scanner(System.in);
       System.out.print("Enter a size: (SMALL, MEDIUM, LARGE, EXTRA_LARGE) ");
       String input = in.next().toUpperCase();
@@ -21,14 +34,4 @@ public class EnumTest
          System.out.println("Good job--you paid attention to the _.");
       }
    }
-}
-
-enum Size
-{
-   SMALL("S"), MEDIUM("M"), LARGE("L"), EXTRA_LARGE("XL");
-
-   private Size(String abbreviation) { this.abbreviation = abbreviation; }
-   public String getAbbreviation() { return abbreviation; }
-
-   private String abbreviation;
 }
